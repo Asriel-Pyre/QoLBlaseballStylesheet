@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Mobile-Friendlier Blaseball
 @namespace      github.com/openstyles/stylus
-@version        1.0.0
+@version        1.0.1
 @description    QoL changes I wanted to see on the new blaseball.com, fully implemented..
 @author         @Kit_Mason_
 ==/UserStyle== */
@@ -40,4 +40,10 @@
 	z-index: 20;
 }
     
+    .user-header__info__name {
+    width: clamp(5vw,5vw,8vw); /* Prevents the username section from going past the navigation bar */
+    white-space:nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    }
 }
