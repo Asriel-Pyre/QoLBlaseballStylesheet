@@ -1,0 +1,43 @@
+/* ==UserStyle==
+@name           Mobile-Friendlier Blaseball
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    QoL changes I wanted to see on the new blaseball.com, fully implemented..
+@author         @Kit_Mason_
+==/UserStyle== */
+
+@-moz-document domain("blaseball.com") {
+    .navigation {
+	border-right: 1px solid #3d414c;
+	height: 100vh;
+	justify-content: space-between;
+	padding: 0 2rem;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	width: clamp(15rem, 10vw, 30rem); /* Tries to maintain the width of the sidebar at 10% of the window width, between the limits of 15-30x the font size.  */
+}
+
+    .playtab__gamelist {
+	--auto-grid-min-size: 0rem;
+	grid-gap: 1rem;
+	display: grid;
+	grid-template-columns: repeat(auto-fill,minmax(var(--auto-grid-min-size),22rem));
+	justify-content: center;
+	margin: 0 auto;
+	max-width: initial; /* Edits the gamelist to fit as many games horizontally as possible. */
+}
+    
+    .schedule {
+	background-color: #0a0b0d;
+	margin-bottom: 3rem;
+	padding-bottom: .5rem;
+	padding-top: .5rem;
+	position: -webkit-sticky;
+	position: static; /* Edits the schedule bar to remain at the top at all times. */
+	top: 0;
+	width: 100%;
+	z-index: 20;
+}
+    
+}
